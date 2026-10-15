@@ -4,151 +4,260 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CarePlus Hospital | Appointments</title>
+  <title>CarePlus Hospital | Appointment Portal</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f3f8fc;
       color: #203247;
+      line-height: 1.6;
     }
+
     header {
       background: #087e8b;
       color: white;
       padding: 24px 7%;
     }
-    header h1 { margin: 0 0 8px; }
-    nav { margin-top: 18px; }
+
+    header h1 {
+      margin: 0 0 5px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
       margin-right: 20px;
       font-weight: bold;
     }
-    main { padding: 25px 7%; }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 25px 7%;
+    }
+
     .hero {
       background: white;
-      padding: 24px;
+      padding: 25px;
       border-radius: 12px;
       border-left: 5px solid #087e8b;
     }
+
+    .hero h2 {
+      color: #087e8b;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
       gap: 18px;
       margin-top: 20px;
     }
+
     .card {
       background: white;
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 3px 12px #17324d12;
     }
-    .card h3 { color: #087e8b; margin-top: 0; }
+
+    .card h3 {
+      color: #087e8b;
+      margin-top: 0;
+    }
+
     .slot {
       display: inline-block;
       background: #e1f5ef;
       color: #17694f;
-      padding: 7px 10px;
+      padding: 7px 12px;
       border-radius: 6px;
       margin: 4px 2px;
     }
+
     .announcement {
       background: #fff5dc;
       padding: 16px;
       border-radius: 8px;
-      margin-top: 18px;
+      margin-top: 15px;
+      border-left: 4px solid #e6a323;
     }
+
+    .new-opportunity {
+      border-top: 4px solid #087e8b;
+    }
+
+    .status {
+      display: inline-block;
+      background: #e1f5ef;
+      color: #17694f;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 13px;
+    }
+
     footer {
       background: #203247;
       color: white;
       text-align: center;
-      padding: 18px;
+      padding: 20px;
       margin-top: 25px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: inline-block;
+        margin: 5px 12px 5px 0;
+      }
+
+      main {
+        padding: 18px 5%;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>CarePlus Hospital</h1>
     <p>Your health, our priority.</p>
+
     <nav>
+      <a href="#home">Home</a>
       <a href="#doctors">Doctors</a>
       <a href="#appointments">Appointments</a>
       <a href="#announcements">Announcements</a>
+      <a href="#careers">Careers</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+
+    <section id="home" class="hero">
       <h2>Welcome to CarePlus Hospital</h2>
-      <p>Explore our medical specialists and available consultation timings.</p>
-      <p><strong>Appointment Desk:</strong> Monday–Saturday, 8:00 AM–6:00 PM</p>
+      <p>
+        Explore our medical specialists, consultation timings,
+        and available appointment slots.
+      </p>
+      <p>
+        <strong>Appointment Desk:</strong>
+        Monday–Saturday, 8:00 AM–6:00 PM
+      </p>
+      <p>
+        Our goal is to make healthcare information simple and accessible.
+      </p>
     </section>
 
     <section id="doctors">
       <h2>Our Doctors</h2>
+
       <div class="grid">
+
         <article class="card">
           <h3>Dr. Ananya Kumar</h3>
           <p><strong>Specialization:</strong> Cardiology</p>
           <p><strong>Consultation:</strong> 9:00 AM–12:00 PM</p>
           <p><strong>Days:</strong> Monday–Friday</p>
         </article>
+
         <article class="card">
           <h3>Dr. Rahul Sharma</h3>
           <p><strong>Specialization:</strong> Dermatology</p>
           <p><strong>Consultation:</strong> 10:00 AM–1:00 PM</p>
           <p><strong>Days:</strong> Monday–Saturday</p>
         </article>
+
         <article class="card">
           <h3>Dr. Meera Nair</h3>
           <p><strong>Specialization:</strong> Pediatrics</p>
           <p><strong>Consultation:</strong> 2:00 PM–5:00 PM</p>
           <p><strong>Days:</strong> Tuesday–Saturday</p>
         </article>
+
       </div>
     </section>
 
     <section id="appointments">
       <h2>Available Appointment Slots</h2>
+
       <div class="card">
         <p>Sample appointment availability:</p>
+
         <span class="slot">9:00 AM</span>
         <span class="slot">10:30 AM</span>
         <span class="slot">11:00 AM</span>
         <span class="slot">2:00 PM</span>
         <span class="slot">3:30 PM</span>
-        <p>Contact the appointment desk to confirm a slot.</p>
+
+        <p>
+          Contact the appointment desk to confirm an appointment.
+        </p>
       </div>
     </section>
 
     <section id="announcements">
       <h2>Hospital Announcements</h2>
+
       <div class="announcement">
         <strong>Health Check-up Camp:</strong>
         Free preliminary health screenings are available this Saturday.
       </div>
+
       <div class="announcement">
         <strong>Holiday Notice:</strong>
         Emergency services remain available 24/7.
       </div>
     </section>
 
-    <section id="placements">
+    <section id="careers">
       <h2>Careers and Opportunities</h2>
-      <div class="card">
-        <h3>Hospital IT Support Intern</h3>
-        <p>Department: Information Technology</p>
-        <p>Opportunity: Assist with hospital website and digital systems.</p>
+
+      <div class="grid">
+
+        <article class="card">
+          <h3>Hospital IT Support Intern</h3>
+          <p><strong>Department:</strong> Information Technology</p>
+          <p>
+            Assist with the hospital website and digital systems.
+          </p>
+          <span class="status">Internship</span>
+        </article>
+
+        <article class="card new-opportunity">
+          <h3>Junior Data Analyst</h3>
+          <p><strong>Department:</strong> Hospital Analytics</p>
+          <p>
+            Support healthcare reporting, data analysis,
+            and preparation of operational reports.
+          </p>
+          <span class="status">New Opportunity</span>
+        </article>
+
       </div>
     </section>
+
   </main>
 
   <footer>
-    <p>CarePlus Hospital | Sample academic project</p>
-    <p>This website displays sample information and does not book real appointments.</p>
+    <p>CarePlus Hospital | Academic DevOps Project</p>
+    <p>
+      This website displays sample information and does not book real appointments.
+    </p>
   </footer>
+
 </body>
 </html>
